@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+    char *str;
+    str = "%s";
+    printf(str, "K\n");
+    return 0;
+}
+
+
+Error
+No output
+K
+%s
+
+Ans : K
+
+ without specifying the format specifier str can't be checked and it not going to cause error just print 
+what is inside "" in this
+
