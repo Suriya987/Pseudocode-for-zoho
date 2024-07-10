@@ -1,0 +1,10 @@
+
+The operator used to get value at address stored in a pointer variable is
+
+*
+&
+&&
+||
+
+Ans: *
+
