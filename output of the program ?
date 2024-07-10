@@ -1,0 +1,21 @@
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    int i=3, *j, k;
+    j = &i;
+    printf("%d\n", i**j*i+*j);
+    return 0;
+}
+
+
+30
+27
+9
+3
+
+Ans : 30  
+
+3*3*3+3  = 30
