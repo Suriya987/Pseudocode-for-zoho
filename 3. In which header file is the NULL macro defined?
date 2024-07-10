@@ -1,0 +1,11 @@
+
+In which header file is the NULL macro defined?
+
+stdio.h
+stddef.h
+stdio.h and stddef.h
+math.h
+
+Ans:  stdio.h and stddef.h
+
+The macro "NULL" is defined in locale.h, stddef.h, stdio.h, stdlib.h, string.h, time.h, and wchar.h.
