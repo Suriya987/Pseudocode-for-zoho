@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+void fun(void *p);
+int i;
+
+int main()
+{
+    void *vptr;
+    vptr = &i;
+    fun(vptr);
+    return 0;
+}
+void fun(void *p)
+{
+    int **q;
+    q = (int**)&p;     --> this line is for when we using void pointer we need mention which data type we used to print the value.
+    printf("%d\n", **q);
+}
+
+Error: cannot convert from void** to int**
+Garbage value
+0
+No output
+
+Ans : 0  
+
+becoz global variable default value is 0
+local variable default value is garbage 
