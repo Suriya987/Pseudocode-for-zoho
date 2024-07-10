@@ -1,0 +1,31 @@
+
+If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?
+.
+&
+*
+->
+
+
+Ans : ->
+
+The eg Syntax is;
+
+struct node
+{
+int data;
+};
+main(){
+struct node p,*a;
+P.data=10;
+a=&p;
+printf(" %d",a->data);
+}
+
+And Output is 10.
+
+
+When ever we want to fetch the value out of a pointer variable which is store in a structure.
+
+We always use -> (arrow) pointer.
+
+On the other hand if in a structure we have a simple variable of any data type we will use .(dot) operator to fetch the value from a variable.  
