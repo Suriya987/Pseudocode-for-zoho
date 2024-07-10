@@ -1,0 +1,28 @@
+
+Can you combine the following two statements into one?
+
+char *p;
+p = (char*) malloc(100);
+
+char p = *malloc(100);
+char *p = (char) malloc(100);
+char *p = (char*)malloc(100);
+char *p = (char *)(malloc*)(100);
+
+Ans:  char *p = (char*)malloc(100);
+
+The malloc function creates a memory in heap memory and returns void pointer. which can be converted into any pointer type. now so char *p=(char *)malloc(sizeof(int)*10);
+
+The correct syntax to create a pointer of a specific type is:- <data type> *(pointer name);
+
+Prototype of malloc = ptr = (data type *)malloc(size);
+
+
+Nowhere,
+
+size(int)*10 means want to create 20 bytes of memory.
+malloc(sizeof(int)*10) means 20 bytes of memory created by malloc function in heap memory.
+now malloc function returns void pointer. A void pointer can convert into any other pointer type.
+(char *)malloc(sizeof(int)*n)
+
+Here we had converted the void pointer into char pointer.
