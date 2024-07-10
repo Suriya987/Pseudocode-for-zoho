@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    char str[20] = "Hello";
+    char *const p=str;
+    *p='M';
+    printf("%s\n", str);
+    return 0;
+}
+
+Mello
+Hello
+HMello
+MHello
+
+Ans : Mello
+
+const is not changeable once it is initiated
+
+p-> points address of H 
+*p -> points the value
+
+*p='M'
+it change the H->M
+
+So, Mello
