@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main()
+{
+    void *vp;
+    char ch=74, *cp="JACK";
+    int j=65;
+    vp=&ch;
+    printf("%c", *(char*)vp);
+    vp=&j;
+    printf("%c", *(int*)vp);
+    vp=cp;
+    printf("%s", (char*)vp+2);
+    return 0;
+}
+JCK
+J65K
+JAK
+JACK
+
+Ans: JACK
+
+Explanation :
+printf ("%c", * (int*) vp) ;
+Here vp is a void pointer (void * vp)that can hold address of all type of variable.
+Lets take an example
+void *vp; // void pointer declaration
+int a=5; // declaration of variable and assigned to 5
+vp=&a;
+Normally to show the value of the variable through pointer, we are just appending * before pointer i.e printf("%d",*p) that means it will show value at p . but here it will not show if we will declare like the above. Because vp is a void pointer that means it can hold all data type address .if we simply place *vp then compiler does not identify ..So for that we have to type cast ie (int *)vp ..it indicates vp hold the integer address only .if we wan to see that value just place * (int *)vp..
+Then you will get the value of variable..but here %c format specifier used so it will convert that integer value to character value
