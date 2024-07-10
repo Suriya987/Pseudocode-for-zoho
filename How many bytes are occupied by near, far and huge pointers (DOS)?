@@ -1,0 +1,9 @@
+How many bytes are occupied by near, far and huge pointers (DOS)?
+near=2 far=4 huge=4
+near=4 far=8 huge=8
+near=2 far=4 huge=8
+near=4 far=4 huge=8
+
+Ans:  near=2 far=4 huge=4
+
+near=2, far=4 and huge=4 pointers exist only under DOS. Under windows and Linux every pointers is 4 bytes long.
