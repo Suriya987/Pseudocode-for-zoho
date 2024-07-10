@@ -1,0 +1,29 @@
+What would be the equivalent pointer expression for referring the array element a[i][j][k][l]
+
+((((a+i)+j)+k)+l)
+*(*(*(*(a+i)+j)+k)+l)
+(((a+i)+j)+k+l)
+((a+i)+j+k+l)
+
+
+Ans:  *(*(*(*(a+i)+j)+k)+l)
+
+Here In the above problem "a" is an Array having $ dimensions.
+
+Which indicates that a is a pointer and i , j , k , l are offset values.
+
+Let Us Consider An Example : Of An Array;
+
+int ptr = a + i;
+where a is Base address and i is Offset,
+now it gives address of a[i] which is in integer form
+Hence we will it into address as *(a+i) ;
+and then add it with the 2-nd offset i.e. j -> *(a+i)+j.
+
+Similarly The Process Continues as Follows:
+Address = *(a+i)+j Offset = k
+new Address = (*(*(a+i)+j)+k)
+Address = *(*(a+i)+j)+k Offset = l
+new Address = *(*(*(a+i)+j)+k)+l
+
+And Then Finally The Address Of The Element a[i][j][k][l] = *(*(*(*(a+i)+j)+k)+l).
