@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main()
+{
+    int x=30, *y, *z;
+    y=&x; /* Assume address of x is 500 and integer is 4 byte size */
+    z=y;
+    *y++=*z++;
+    x++;
+    printf("x=%d, y=%d, z=%d\n", x, y, z);
+    return 0;
+}
+
+x=31, y=502, z=502
+x=31, y=500, z=500
+x=31, y=498, z=498
+x=31, y=504, z=504
+
+Ans: 
+x=31, y=504, z=504
+
+*y++ -> increment the address   
+why not the value
+  (*y)++  -> it only increment the values
+
+assuming 500 is the address 
+  if increments pointer is 4 byte so 500 -> become -> 504
+  z -> 500 -> 504
+
+x=30 , x++
+ 31.
