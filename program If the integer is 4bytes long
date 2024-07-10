@@ -1,0 +1,36 @@
+output of the program If the integer is 4bytes long?
+
+#include<stdio.h>
+
+int main()
+{
+    int ***r, **q, *p, i=8;
+    p = &i;
+    q = &p;
+    r = &q;
+    printf("%d, %d, %d\n", *p, **q, ***r);
+    return 0;
+}
+
+
+8, 8, 8
+4000, 4002, 4004
+4000, 4004, 4008
+4000, 4008, 4016
+
+Ans: 8, 8, 8
+
+p-> addr(i)
+q-> addr(p)
+r-> addr(q)
+
+*p -> val which add is holding in p
+**q ->  *q -> addr(i) becoz it is holding p addred *q means value of p ( value is address of i)  
+        **q -> value of i so ,8 
+
+***r->   *r -> value of the address it is holding  ( q addr )
+          **r ->   p addr  becoz q is holding the address of p which is consider as a value of p
+          ***r -> addr of i and it prints the value of i 
+
+
+
